@@ -25,8 +25,40 @@ namespace projeto_pio
 
         private void button2_Click(object sender, EventArgs e)
         {
-            logado obj_logado = new logado();
-            obj_logado.ShowDialog();
+            bool val = true;
+
+            if (nome_login.Text == "")
+            {
+                val = false;
+             
+            }
+            else if(senha_login.Text == "")
+            {
+                val = false;
+            }
+            else
+            {
+                val = true;
+            }
+
+
+            if (val == false)
+            {
+                MessageBox.Show("Email e senha incorretos!!");
+            }
+            else
+            {
+                logado obj_logado = new logado();
+                obj_logado.ShowDialog();
+            }
+
+
+
+
+            
         }
+
+
+        
     }
 }
