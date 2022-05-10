@@ -31,22 +31,19 @@ namespace projeto_pio
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(logado));
             this.tabela_dados = new System.Windows.Forms.DataGridView();
-            this.nome_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tel_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endereco_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairro_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rg_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpf_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senha_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.nome_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endereco_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpf_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senha_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabela_dados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,13 +52,10 @@ namespace projeto_pio
             this.tabela_dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabela_dados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nome_grid,
-            this.Tel_grid,
             this.celular_grid,
             this.email_grid,
             this.endereco_grid,
             this.numero_grid,
-            this.bairro_grid,
-            this.rg_grid,
             this.cpf_grid,
             this.senha_grid});
             this.tabela_dados.Location = new System.Drawing.Point(64, 84);
@@ -69,56 +63,6 @@ namespace projeto_pio
             this.tabela_dados.RowTemplate.Height = 25;
             this.tabela_dados.Size = new System.Drawing.Size(560, 133);
             this.tabela_dados.TabIndex = 33;
-            // 
-            // nome_grid
-            // 
-            this.nome_grid.HeaderText = "Nome";
-            this.nome_grid.Name = "nome_grid";
-            // 
-            // Tel_grid
-            // 
-            this.Tel_grid.HeaderText = "Telefone";
-            this.Tel_grid.Name = "Tel_grid";
-            // 
-            // celular_grid
-            // 
-            this.celular_grid.HeaderText = "Celular";
-            this.celular_grid.Name = "celular_grid";
-            // 
-            // email_grid
-            // 
-            this.email_grid.HeaderText = "Email";
-            this.email_grid.Name = "email_grid";
-            // 
-            // endereco_grid
-            // 
-            this.endereco_grid.HeaderText = "Endereço";
-            this.endereco_grid.Name = "endereco_grid";
-            // 
-            // numero_grid
-            // 
-            this.numero_grid.HeaderText = "Numero";
-            this.numero_grid.Name = "numero_grid";
-            // 
-            // bairro_grid
-            // 
-            this.bairro_grid.HeaderText = "Bairro";
-            this.bairro_grid.Name = "bairro_grid";
-            // 
-            // rg_grid
-            // 
-            this.rg_grid.HeaderText = "RG";
-            this.rg_grid.Name = "rg_grid";
-            // 
-            // cpf_grid
-            // 
-            this.cpf_grid.HeaderText = "CPF";
-            this.cpf_grid.Name = "cpf_grid";
-            // 
-            // senha_grid
-            // 
-            this.senha_grid.HeaderText = "Senha";
-            this.senha_grid.Name = "senha_grid";
             // 
             // label1
             // 
@@ -193,6 +137,41 @@ namespace projeto_pio
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // nome_grid
+            // 
+            this.nome_grid.HeaderText = "Nome";
+            this.nome_grid.Name = "nome_grid";
+            // 
+            // celular_grid
+            // 
+            this.celular_grid.HeaderText = "Celular";
+            this.celular_grid.Name = "celular_grid";
+            // 
+            // email_grid
+            // 
+            this.email_grid.HeaderText = "Email";
+            this.email_grid.Name = "email_grid";
+            // 
+            // endereco_grid
+            // 
+            this.endereco_grid.HeaderText = "Endereço";
+            this.endereco_grid.Name = "endereco_grid";
+            // 
+            // numero_grid
+            // 
+            this.numero_grid.HeaderText = "Numero";
+            this.numero_grid.Name = "numero_grid";
+            // 
+            // cpf_grid
+            // 
+            this.cpf_grid.HeaderText = "CPF";
+            this.cpf_grid.Name = "cpf_grid";
+            // 
+            // senha_grid
+            // 
+            this.senha_grid.HeaderText = "Senha";
+            this.senha_grid.Name = "senha_grid";
+            // 
             // logado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -216,21 +195,18 @@ namespace projeto_pio
         #endregion
 
         private System.Windows.Forms.DataGridView tabela_dados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tel_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn celular_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endereco_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numero_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bairro_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rg_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpf_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senha_grid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome_grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn celular_grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email_grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endereco_grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero_grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpf_grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senha_grid;
     }
 }

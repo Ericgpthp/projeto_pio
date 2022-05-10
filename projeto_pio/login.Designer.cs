@@ -29,8 +29,8 @@ namespace projeto_pio
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_entrar = new System.Windows.Forms.Button();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
             this.senha_login = new System.Windows.Forms.TextBox();
             this.nome_login = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,27 +38,27 @@ namespace projeto_pio
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_entrar
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(289, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "ENTRAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_entrar.Location = new System.Drawing.Point(289, 174);
+            this.btn_entrar.Name = "btn_entrar";
+            this.btn_entrar.Size = new System.Drawing.Size(83, 23);
+            this.btn_entrar.TabIndex = 13;
+            this.btn_entrar.Text = "ENTRAR";
+            this.btn_entrar.UseVisualStyleBackColor = true;
+            this.btn_entrar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btn_cadastrar
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(200, 174);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "CADASTRAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cadastrar.Location = new System.Drawing.Point(200, 174);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(83, 23);
+            this.btn_cadastrar.TabIndex = 12;
+            this.btn_cadastrar.Text = "CADASTRAR";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // senha_login
             // 
@@ -109,8 +109,8 @@ namespace projeto_pio
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_entrar);
+            this.Controls.Add(this.btn_cadastrar);
             this.Controls.Add(this.senha_login);
             this.Controls.Add(this.nome_login);
             this.Controls.Add(this.label3);
@@ -125,8 +125,8 @@ namespace projeto_pio
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_entrar;
+        private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.TextBox senha_login;
         private System.Windows.Forms.TextBox nome_login;
         private System.Windows.Forms.Label label3;
