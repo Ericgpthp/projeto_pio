@@ -19,7 +19,7 @@ namespace projeto_pio
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cadastrar obj_cadastrar = new cadastrar();
+            Cadastrar obj_cadastrar = new Cadastrar();
             obj_cadastrar.ShowDialog();
         }
 
