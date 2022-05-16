@@ -38,7 +38,7 @@ namespace projeto_pio
             this.label8 = new System.Windows.Forms.Label();
             this.txt_numero = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_endereço = new System.Windows.Forms.TextBox();
+            this.txt_endereco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,8 +46,8 @@ namespace projeto_pio
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.text_cpf = new System.Windows.Forms.TextBox();
-            this.text_celular = new System.Windows.Forms.TextBox();
+            this.txt_cpf = new System.Windows.Forms.TextBox();
+            this.txt_celular = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,12 +118,12 @@ namespace projeto_pio
             this.label6.TabIndex = 33;
             this.label6.Text = "Numero";
             // 
-            // txt_endereço
+            // txt_endereco
             // 
-            this.txt_endereço.Location = new System.Drawing.Point(158, 165);
-            this.txt_endereço.Name = "txt_endereço";
-            this.txt_endereço.Size = new System.Drawing.Size(192, 23);
-            this.txt_endereço.TabIndex = 32;
+            this.txt_endereco.Location = new System.Drawing.Point(158, 165);
+            this.txt_endereco.Name = "txt_endereco";
+            this.txt_endereco.Size = new System.Drawing.Size(192, 23);
+            this.txt_endereco.TabIndex = 32;
             // 
             // label5
             // 
@@ -179,27 +179,27 @@ namespace projeto_pio
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // text_cpf
+            // txt_cpf
             // 
-            this.text_cpf.Location = new System.Drawing.Point(377, 198);
-            this.text_cpf.Name = "text_cpf";
-            this.text_cpf.Size = new System.Drawing.Size(75, 23);
-            this.text_cpf.TabIndex = 46;
+            this.txt_cpf.Location = new System.Drawing.Point(377, 198);
+            this.txt_cpf.Name = "txt_cpf";
+            this.txt_cpf.Size = new System.Drawing.Size(75, 23);
+            this.txt_cpf.TabIndex = 46;
             // 
-            // text_celular
+            // txt_celular
             // 
-            this.text_celular.Location = new System.Drawing.Point(158, 198);
-            this.text_celular.Name = "text_celular";
-            this.text_celular.Size = new System.Drawing.Size(84, 23);
-            this.text_celular.TabIndex = 47;
+            this.txt_celular.Location = new System.Drawing.Point(158, 198);
+            this.txt_celular.Name = "txt_celular";
+            this.txt_celular.Size = new System.Drawing.Size(84, 23);
+            this.txt_celular.TabIndex = 47;
             // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.text_celular);
-            this.Controls.Add(this.text_cpf);
+            this.Controls.Add(this.txt_celular);
+            this.Controls.Add(this.txt_cpf);
             this.Controls.Add(this.btn_inserir);
             this.Controls.Add(this.txt_senha);
             this.Controls.Add(this.label11);
@@ -207,7 +207,7 @@ namespace projeto_pio
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_numero);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txt_endereço);
+            this.Controls.Add(this.txt_endereco);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.label4);
@@ -231,7 +231,7 @@ namespace projeto_pio
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_numero;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_endereço;
+        private System.Windows.Forms.TextBox txt_endereco;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label4;
@@ -239,7 +239,7 @@ namespace projeto_pio
         private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.TextBox text_cpf;
-        private System.Windows.Forms.TextBox text_celular;
+        private System.Windows.Forms.TextBox txt_cpf;
+        private System.Windows.Forms.TextBox txt_celular;
     }
 }

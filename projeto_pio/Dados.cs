@@ -6,9 +6,9 @@ namespace projeto_pio
 {
     internal class Dados
     {
-        public bool inserirUsuario(string nome, string email, string senha)
+        public bool inserirUsuario(string nome, string email, string endereco, string numeroEndereco, string celular, string cpf, string senha)
         {
-            if (nome == "1")
+            if (nome.Equals("Gabriel"))
             {
                 return true;
             }
