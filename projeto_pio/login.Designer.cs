@@ -32,7 +32,7 @@ namespace projeto_pio
             this.btn_entrar = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.senha_login = new System.Windows.Forms.TextBox();
-            this.nome_login = new System.Windows.Forms.TextBox();
+            this.cpf_login = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,30 +68,32 @@ namespace projeto_pio
             this.senha_login.Size = new System.Drawing.Size(280, 23);
             this.senha_login.TabIndex = 11;
             // 
-            // nome_login
+            // cpf_login
             // 
-            this.nome_login.Location = new System.Drawing.Point(92, 96);
-            this.nome_login.Name = "nome_login";
-            this.nome_login.Size = new System.Drawing.Size(280, 23);
-            this.nome_login.TabIndex = 10;
+            this.cpf_login.Location = new System.Drawing.Point(92, 96);
+            this.cpf_login.Name = "cpf_login";
+            this.cpf_login.Size = new System.Drawing.Size(280, 23);
+            this.cpf_login.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(50, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 15);
+            this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Senha";
+            this.label3.Text = "Senha:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(50, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 15);
+            this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Email";
+            this.label2.Text = "CPF:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -112,7 +114,7 @@ namespace projeto_pio
             this.Controls.Add(this.btn_entrar);
             this.Controls.Add(this.btn_cadastrar);
             this.Controls.Add(this.senha_login);
-            this.Controls.Add(this.nome_login);
+            this.Controls.Add(this.cpf_login);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -128,7 +130,7 @@ namespace projeto_pio
         private System.Windows.Forms.Button btn_entrar;
         private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.TextBox senha_login;
-        private System.Windows.Forms.TextBox nome_login;
+        private System.Windows.Forms.TextBox cpf_login;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

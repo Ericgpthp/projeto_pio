@@ -18,5 +18,12 @@ namespace projeto_pio
                 objEntidadeUsuario.CPF,
                 objEntidadeUsuario.Senha);
         }
+    
+        public bool consultar()
+        {
+            return objBEUsuario.Consultar(objEntidadeUsuario.CPF, objEntidadeUsuario.Senha);
+        }
+    
+        
     }
 }

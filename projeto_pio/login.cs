@@ -25,40 +25,32 @@ namespace projeto_pio
 
         private void button2_Click(object sender, EventArgs e)
         {
-            bool val = true;
-
-            if (nome_login.Text == "")
+            BFFUsuario objBFFUsuario = new BFFUsuario();
+            FEValidacao obj_FEValidacao = new FEValidacao();
+            objBFFUsuario.objEntidadeUsuario.Nome = "";
+            objBFFUsuario.objEntidadeUsuario.Email = "";
+            objBFFUsuario.objEntidadeUsuario.Endereco = "";
+            objBFFUsuario.objEntidadeUsuario.NumeroEndereco = "";
+            objBFFUsuario.objEntidadeUsuario.Celular = "";
+            objBFFUsuario.objEntidadeUsuario.CPF = cpf_login.Text;
+            objBFFUsuario.objEntidadeUsuario.Senha = senha_login.Text;
+            if (obj_FEValidacao.ValidaCPF(cpf_login.Text))
             {
-                val = false;
-             
-            }
-            else if(senha_login.Text == "")
+                MessageBox.Show("Entrou na cosulta");
+            } else
             {
-                val = false;
+                MessageBox.Show("Erro na consulta");
             }
-            else
-            {
-                val = true;
-            }
-
-
-            if (val == false)
-            {
-                MessageBox.Show("Email e senha incorretos!!");
-            }
-            else
-            {
-                logado obj_logado = new logado();
-                obj_logado.ShowDialog();
-            }
-
-
-
-
-            
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
-        
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

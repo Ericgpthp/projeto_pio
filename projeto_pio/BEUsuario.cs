@@ -11,5 +11,12 @@ namespace projeto_pio
         {
             return objDados.inserirUsuario(nome, email, endereco, numeroEndereco, celular, cpf, senha);
         }
+        
+        public bool Consultar(string cpf, string senha)
+        {
+            return objDados.consultarUsuario(cpf, senha);
+        }
     }
+
+
 }

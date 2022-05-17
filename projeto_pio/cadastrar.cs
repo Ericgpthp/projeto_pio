@@ -21,18 +21,26 @@ namespace projeto_pio
         private void btn_inserir_Click(object sender, EventArgs e)
 
         {
-            if (true)
+
+           
+            if (proc_val())
             {
                 BFFUsuario objBFFUsuario = new BFFUsuario();
-                logado obj_logado = new logado();
-                obj_logado.ShowDialog();
-                atribuirDados();
+                objBFFUsuario.objEntidadeUsuario.Nome = txt_nome.Text;
+                objBFFUsuario.objEntidadeUsuario.Email = txt_email.Text;
+                objBFFUsuario.objEntidadeUsuario.Endereco = txt_endereco.Text;
+                objBFFUsuario.objEntidadeUsuario.NumeroEndereco = txt_numero.Text;
+                objBFFUsuario.objEntidadeUsuario.Celular = txt_celular.Text;
+                objBFFUsuario.objEntidadeUsuario.CPF = txt_cpf.Text;
+                objBFFUsuario.objEntidadeUsuario.Senha = txt_senha.Text;
+
+                MessageBox.Show(txt_nome.Text);
                 if(objBFFUsuario.inserir())
                 {
-                    MessageBox.Show("Gabriel Inserido no Sistema");
+                    
                 }else
                 {
-                    MessageBox.Show("Erros ao inserir");
+                     
                 }
 
             } 
@@ -123,17 +131,6 @@ namespace projeto_pio
         }
 
         //FUNCAO PARA ATRIBUIR OS VALORES DOS CAMPOS NAS VARIAVEIS
-        private void atribuirDados()
-        {
-            EntidadeUsuario objEntidadeUsuario = new EntidadeUsuario();
-            objEntidadeUsuario.Nome = txt_nome.Text;
-            objEntidadeUsuario.Email = txt_email.Text;
-            objEntidadeUsuario.Endereco = txt_endereco.Text;
-            objEntidadeUsuario.NumeroEndereco = txt_numero.Text;
-            objEntidadeUsuario.Celular = txt_celular.Text;
-            objEntidadeUsuario.CPF = txt_cpf.Text;
-            objEntidadeUsuario.Senha = txt_senha.Text;
-        }
 
         private void Cadastrar_Load(object sender, EventArgs e)
         {
