@@ -10,11 +10,11 @@ namespace projeto_pio
 {
     public partial class logado : Form
 
-
-    {
-
-        Cadastrar objCadastrar = new Cadastrar();
-        BFFUsuario objBFFUsuario = new BFFUsuario();
+        
+    {   private Alterar objAlterar = new Alterar();
+        private BFFUsuario objBFFUsuario = new BFFUsuario();
+        private EntidadeUsuario objEntidadeUsuario = new EntidadeUsuario();
+        
         public logado()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace projeto_pio
         }
 
         
-        
+
         public void mostrarDados ()
         {
 
@@ -34,40 +34,37 @@ namespace projeto_pio
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public string gerarCPF()
         {
-            
-            
+            return txt_cpf_buscar.Text;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {   
+            objAlterar.cpf_buscado = txt_cpf_buscar.Text;
+            objAlterar.LerDados();
+            objAlterar.ShowDialog();
 
-            
-            if (objCadastrar.proc_val(objBFFUsuario.objEntidadeUsuario.Nome,
-                objBFFUsuario.objEntidadeUsuario.Email,
-                objBFFUsuario.objEntidadeUsuario.Endereco,
-                objBFFUsuario.objEntidadeUsuario.NumeroEndereco,
-                objBFFUsuario.objEntidadeUsuario.Celular,
-                objBFFUsuario.objEntidadeUsuario.CPF,
-                objBFFUsuario.objEntidadeUsuario.Senha))
-            {
+        }   
 
-                if(objBFFUsuario.update())
-                {
-                    MessageBox.Show("Usuario Alterado com sucesso");
-                } else
-                {
-                    MessageBox.Show("Erro ao alterar os dados");
 
-                }
-            } 
-            }
 
+        //BTN Buscar
         private void button3_Click(object sender, EventArgs e)
         {
+
+            BFFUsuario objBFFUsuario = new BFFUsuario();
             FEValidacao objFEValidacao = new FEValidacao();
-            if (objFEValidacao.ValidaCPF(txt_nome.Text))
+            if (objFEValidacao.ValidaCPF(txt_cpf_buscar.Text))
             {
-                if(objBFFUsuario.buscar(txt_nome.Text))
+                string nome = "";
+                string email = "";
+                string endereco = "";
+                string numeroEndereco = "";
+                string celular = "";
+                string senha = "";
+                if (objBFFUsuario.buscar(txt_cpf_buscar.Text, ref nome, ref email, ref endereco, ref numeroEndereco, ref celular, ref senha))
                 {
-                    MessageBox.Show(objBFFUsuario.objEntidadeUsuario.Nome);
+                    this.painelDados.Rows.Add(nome, email, endereco, numeroEndereco, celular);
                 } else
                 {
                     MessageBox.Show("Cpf inexistente");
@@ -78,9 +75,33 @@ namespace projeto_pio
             }
         }
 
+        
+        //BTN DELETAR
         private void button2_Click(object sender, EventArgs e)
         {
-            objBFFUsuario.deletar(txt_nome.Text);
+            
+            if(objBFFUsuario.deletar(txt_cpf_buscar.Text))
+            {
+                MessageBox.Show("Usuario removido");
+            } else
+            {
+                MessageBox.Show("Falha ao remover");
+            }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void painelDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

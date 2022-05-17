@@ -8,7 +8,8 @@ namespace projeto_pio
 {
     internal class Dados
     {
-        BFFUsuario objBFFUsuario = new BFFUsuario();
+        public EntidadeUsuario objEntidadeUsuario = new EntidadeUsuario();
+        
         SqlConnection con;
         SqlCommand cmd;
         public bool inserirUsuario(string nome, string email, string endereco, string numeroEndereco, string celular, string cpf, string senha)
@@ -50,7 +51,7 @@ namespace projeto_pio
             try
             {
                 conectar();
-                cmd = new SqlCommand("UPDATE tbUsuario SET nome = '" + nome + "', email = '" + email + "'," +
+                cmd = new SqlCommand("UPDATE CLIENTE SET nome = '" + nome + "', email = '" + email + "'," +
                 "endereco = '" + endereco + "', numeroEndereco = '" + numeroEndereco + "', celular = '" + celular + "', senha = '" + senha + "'  WHERE cpf = '" + cpf + "'", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -65,7 +66,7 @@ namespace projeto_pio
         }
 
 
-        public bool buscarUsuario(string cpf)
+        public bool buscarUsuario(string cpf, ref string nome, ref string email,  ref string endereco, ref string numeroEndereco, ref string celular, ref string senha)
         {
             bool returnSelect = false;
 
@@ -80,8 +81,14 @@ namespace projeto_pio
                 {
                     if (adoDR.Read())
                     {
-                        objBFFUsuario.objEntidadeUsuario.Nome = (adoDR["nome"].ToString());
-                        //senha = adoDR["senha"].ToString();
+                        nome = (adoDR["nome"].ToString());
+                        email = (adoDR["email"].ToString());
+                        endereco = (adoDR["endereco"].ToString());
+                        numeroEndereco = (adoDR["numeroEndereco"].ToString());
+                        celular = (adoDR["celular"].ToString());
+                        senha = (adoDR["senha"].ToString());
+
+
                         returnSelect = true;
                     }
                     else
@@ -123,7 +130,7 @@ namespace projeto_pio
             return retorno;
         }
 
-        public bool logarUsuario (string cpf, string senha)
+        public bool logarUsuario(string cpf, ref string nome, ref string email, ref string endereco, ref string numeroEndereco, ref string celular, string senha)
         {
             bool returnSelect = false;
 
@@ -131,15 +138,21 @@ namespace projeto_pio
             {
                 conectar();
                 con.Open();
-                string sql = "SELECT * FROM CLIENTE WHERE cpf = '" + cpf + "'";
+                string sql = "SELECT * FROM CLIENTE WHERE cpf = '" + cpf + "' AND senha = '"+senha+"'";
                 SqlCommand adoCmd = new SqlCommand(sql, con);
                 SqlDataReader adoDR = adoCmd.ExecuteReader();
                 if (adoDR.HasRows)
                 {
                     if (adoDR.Read())
                     {
+                        nome = (adoDR["nome"].ToString());
+                        email = (adoDR["email"].ToString());
+                        endereco = (adoDR["endereco"].ToString());
+                        numeroEndereco = (adoDR["numeroEndereco"].ToString());
+                        celular = (adoDR["celular"].ToString());
                         
-                        //senha = adoDR["senha"].ToString();
+
+
                         returnSelect = true;
                     }
                     else
@@ -158,8 +171,7 @@ namespace projeto_pio
             {
                 throw;
             }
-        }
- 
+        } 
 
         public void conectar()
         {

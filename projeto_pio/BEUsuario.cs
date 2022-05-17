@@ -17,11 +17,16 @@ namespace projeto_pio
             return objDados.updateUsuario(nome, email, endereco, numeroEndereco, celular, cpf, senha);
         }
 
-        public bool Buscar(string cpf)
+        public bool Buscar(string cpf, ref string nome, ref string email, ref string endereco, ref string numeroEndereco, ref string celular, ref string senha)
         {
-            return objDados.buscarUsuario(cpf);
+            return objDados.buscarUsuario( cpf, ref nome,  ref email, ref endereco, ref numeroEndereco, ref celular, ref senha);
         }
-    
+
+        public bool Logar(string cpf, ref string nome, ref string email, ref string endereco, ref string numeroEndereco, ref string celular, string senha)
+        {
+            return objDados.logarUsuario(cpf, ref nome, ref email, ref endereco, ref numeroEndereco, ref celular, senha);
+        }
+
         public bool Deletar(string cpf)
         {
             return objDados.deleteUsuario(cpf);

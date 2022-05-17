@@ -58,19 +58,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_excluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAYlJREFUaEPt
-        kMFNAlEURSlE19ZiLEEswGADNmATRtiYDLKxA8PeBhRcqUtjxAZwrrksnNwXffIvgeSf5CzmZSbnQq9S
-        qVR2n/7p3VF/MH1tXf7iy/HZ9JCfbQ8Y1hkaejKYPvOz7WE1jo8hf31v4+zMD1gNcMmMDxUtKTM+VLSk
-        zJRHxZwyWw4VccpsOVTEKbPlUBGnzJZnNJ4tu55f3H+77h0y40NFs0OjO2TGh4pmh0Z3yIwPFc0Oje6Q
-        GR8qmh0a3SEzPlQ0OzS6Q2Z8qGh2aHSHzPhQ0ezQ6A6Z8aGi2aHRHTLjQ0WzQ6M7ZMaHimaHRnfIjA8V
-        zQ6N7pAZHyqaHRrdITM+VDQ7NLpDZnyoaHZodIfM+FDR7NDoDpnxoaLZodEdMuNDRbNDoztkxoeKZodG
-        d8iMDxXNDo3ukBkfKpodGt0hMz7ayGc3WtAPZnyMxvNbES7isHm8YcbH1eThoI29d+Nr28zeLq/ne8x4
-        GTZP+2100rr4MeJ/LvDPb2x8pVKpFKbX+wJVaDxm1Tl/QAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btn_alterar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAABH9JREFUWEfN
         mH1sE3UYx4d/2E39y5fEt2iM7/8o+t+yXtsMC3TrnQxfEkMimgDi7m6jBg1RYpwmJoIvSNZuzBhgE1i3
@@ -95,19 +83,4 @@
         Kij4FxDeJ0yGxvsHAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="Nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Endereco.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NumeroEndereco.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Celular.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>
