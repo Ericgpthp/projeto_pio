@@ -6,7 +6,11 @@ using System.ComponentModel.DataAnnotations;
 namespace projeto_pio
 {
     internal class FEValidacao
-    {    
+    {
+
+
+
+
         //FUNÇÃO PARA VALIDAR CPF
         public bool ValidaCPF(string vrCPF)
 

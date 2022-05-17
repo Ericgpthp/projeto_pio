@@ -25,22 +25,8 @@ namespace projeto_pio
 
         private void button2_Click(object sender, EventArgs e)
         {
-            BFFUsuario objBFFUsuario = new BFFUsuario();
-            FEValidacao obj_FEValidacao = new FEValidacao();
-            objBFFUsuario.objEntidadeUsuario.Nome = "";
-            objBFFUsuario.objEntidadeUsuario.Email = "";
-            objBFFUsuario.objEntidadeUsuario.Endereco = "";
-            objBFFUsuario.objEntidadeUsuario.NumeroEndereco = "";
-            objBFFUsuario.objEntidadeUsuario.Celular = "";
-            objBFFUsuario.objEntidadeUsuario.CPF = cpf_login.Text;
-            objBFFUsuario.objEntidadeUsuario.Senha = senha_login.Text;
-            if (obj_FEValidacao.ValidaCPF(cpf_login.Text))
-            {
-                MessageBox.Show("Entrou na cosulta");
-            } else
-            {
-                MessageBox.Show("Erro na consulta");
-            }
+            logado objLogado = new logado();
+            objLogado.ShowDialog();
         }
 
         private void label2_Click(object sender, EventArgs e)

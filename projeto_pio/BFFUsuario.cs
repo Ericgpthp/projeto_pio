@@ -19,11 +19,30 @@ namespace projeto_pio
                 objEntidadeUsuario.Senha);
         }
     
-        public bool consultar()
+        public bool update()
         {
-            return objBEUsuario.Consultar(objEntidadeUsuario.CPF, objEntidadeUsuario.Senha);
+            return objBEUsuario.Update(objEntidadeUsuario.Nome,
+                objEntidadeUsuario.Email,
+                objEntidadeUsuario.Endereco,
+                objEntidadeUsuario.NumeroEndereco,
+                objEntidadeUsuario.Celular,
+                objEntidadeUsuario.CPF,
+                objEntidadeUsuario.Senha);
         }
-    
-        
+ 
+        public bool buscar(string cpf)
+        {
+            return objBEUsuario.Buscar(cpf);
+        }
+
+        public bool deletar(string cpf)
+        {
+            return objBEUsuario.Deletar(cpf);
+        }
+
+
+
+
+
     }
 }

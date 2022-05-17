@@ -12,9 +12,19 @@ namespace projeto_pio
             return objDados.inserirUsuario(nome, email, endereco, numeroEndereco, celular, cpf, senha);
         }
         
-        public bool Consultar(string cpf, string senha)
+        public bool Update (string nome, string email, string endereco, string numeroEndereco, string celular, string cpf, string senha)
         {
-            return objDados.consultarUsuario(cpf, senha);
+            return objDados.updateUsuario(nome, email, endereco, numeroEndereco, celular, cpf, senha);
+        }
+
+        public bool Buscar(string cpf)
+        {
+            return objDados.buscarUsuario(cpf);
+        }
+    
+        public bool Deletar(string cpf)
+        {
+            return objDados.deleteUsuario(cpf);
         }
     }
 

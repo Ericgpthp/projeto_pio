@@ -19,28 +19,36 @@ namespace projeto_pio
 
         //BOTAO DE INSERIR 
         private void btn_inserir_Click(object sender, EventArgs e)
-
         {
+            BFFUsuario objBFFUsuario = new BFFUsuario();
+            objBFFUsuario.objEntidadeUsuario.Nome = txt_nome.Text;
+            objBFFUsuario.objEntidadeUsuario.Email = txt_email.Text;
+            objBFFUsuario.objEntidadeUsuario.Endereco = txt_endereco.Text;
+            objBFFUsuario.objEntidadeUsuario.NumeroEndereco = txt_numero.Text;
+            objBFFUsuario.objEntidadeUsuario.Celular = txt_celular.Text;
+            objBFFUsuario.objEntidadeUsuario.CPF = txt_cpf.Text;
+            objBFFUsuario.objEntidadeUsuario.Senha = txt_senha.Text;
+            
+            if (proc_val(objBFFUsuario.objEntidadeUsuario.Nome,
+                objBFFUsuario.objEntidadeUsuario.Email,
+                objBFFUsuario.objEntidadeUsuario.Endereco,
+                objBFFUsuario.objEntidadeUsuario.NumeroEndereco,
+                objBFFUsuario.objEntidadeUsuario.Celular,
+                objBFFUsuario.objEntidadeUsuario.CPF,
+                objBFFUsuario.objEntidadeUsuario.Senha
 
-           
-            if (proc_val())
+                ))
             {
-                BFFUsuario objBFFUsuario = new BFFUsuario();
-                objBFFUsuario.objEntidadeUsuario.Nome = txt_nome.Text;
-                objBFFUsuario.objEntidadeUsuario.Email = txt_email.Text;
-                objBFFUsuario.objEntidadeUsuario.Endereco = txt_endereco.Text;
-                objBFFUsuario.objEntidadeUsuario.NumeroEndereco = txt_numero.Text;
-                objBFFUsuario.objEntidadeUsuario.Celular = txt_celular.Text;
-                objBFFUsuario.objEntidadeUsuario.CPF = txt_cpf.Text;
-                objBFFUsuario.objEntidadeUsuario.Senha = txt_senha.Text;
 
-                MessageBox.Show(txt_nome.Text);
+
                 if(objBFFUsuario.inserir())
                 {
-                    
+                    logado objLogado = new logado();
+                    objLogado.mostrarDados();
+                    objLogado.Show();
                 }else
                 {
-                     
+                    MessageBox.Show("Erros ao inserir");
                 }
 
             } 
@@ -48,13 +56,13 @@ namespace projeto_pio
 
 
         //FUNÇÃO PARA VALIDAR OS DADOS
-        private bool proc_val()
+        public bool proc_val(string nome, string email, string endereco, string numeroEndereco, string celular, string cpf, string senha)
         {
             FEValidacao objFEValidacao = new FEValidacao();
             bool validar = true;
 
             //VALIDACAO DE NOME
-            if (string.IsNullOrEmpty(txt_nome.Text))
+            if (string.IsNullOrEmpty(nome))
             {
                 txt_nome.Focus();
                 errorProvider1.SetError(txt_nome, "INSIRA SEU NOME");
@@ -62,7 +70,7 @@ namespace projeto_pio
             }
 
             //VALIDACAO DE EMAIL
-            if (string.IsNullOrEmpty(txt_email.Text))
+            if (string.IsNullOrEmpty(email))
             {
                 txt_email.Focus();
                 errorProvider1.SetError(txt_email, "INSIRA SEU EMAIL");
@@ -70,7 +78,7 @@ namespace projeto_pio
             }
             else
             {
-                if (objFEValidacao.validarEmail(txt_email.ToString()))
+                if (objFEValidacao.validarEmail(email.ToString()))
                 {
 
                 }
@@ -83,7 +91,7 @@ namespace projeto_pio
             }
 
             //VALIDACAO DE ENDERECO
-            if (string.IsNullOrEmpty(txt_endereco.Text))
+            if (string.IsNullOrEmpty(endereco))
             {
                 txt_endereco.Focus();
                 errorProvider1.SetError(txt_endereco, "INSIRA SEU ENDEREÇO");
@@ -91,7 +99,7 @@ namespace projeto_pio
             }
 
             //VALIDACAO NUMERO DE ENDERECO
-            if (string.IsNullOrEmpty(txt_numero.Text))
+            if (string.IsNullOrEmpty(numeroEndereco))
             {
                 txt_numero.Focus();
                 errorProvider1.SetError(txt_numero, "INSIRA O NUMERO DO SEU ENDEREÇO");
@@ -99,13 +107,13 @@ namespace projeto_pio
             }
 
             //VALIDACAO NUM CELULAR
-            if (string.IsNullOrEmpty(txt_celular.Text))
+            if (string.IsNullOrEmpty(celular))
             {
                 txt_celular.Focus();
                 errorProvider1.SetError(txt_celular, "INSIRA SEU NUMERO DE TELEFONE");
                 validar = false;
             }
-            else if (objFEValidacao.validarCelular(txt_celular.Text) == false)
+            else if (objFEValidacao.validarCelular(celular) == false)
             {
                 txt_celular.Focus();
                 errorProvider1.SetError(txt_celular, "NUMERO INVALIDO");
@@ -113,13 +121,13 @@ namespace projeto_pio
             }
 
             //VALIDACAO CPF
-            if (string.IsNullOrEmpty(txt_cpf.Text))
+            if (string.IsNullOrEmpty(cpf))
             {
                 txt_cpf.Focus();
                 errorProvider1.SetError(txt_cpf, "INSIRA SEU CPF");
                 validar = false;
             }
-            else if (objFEValidacao.ValidaCPF(txt_cpf.Text) == false)
+            else if (objFEValidacao.ValidaCPF(cpf) == false)
             {
                 txt_cpf.Focus();
                 errorProvider1.SetError(txt_cpf, "CPF INVALIDO");
